@@ -4,8 +4,10 @@ const PORT = process.env.PORT || 3000;
 const express = require("express");
 const app = express();
 const userRoute = require("./routers/userRoute");
+const ejsMate = require("ejs-mate");
 
 app.set("view engine", "ejs");
+app.engine("ejs", ejsMate);
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 

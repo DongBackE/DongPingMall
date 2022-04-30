@@ -5,7 +5,7 @@ const router = express.Router();
 router
   .route("/login")
   .get(userController.renderLoginForm)
-  .post(userController.register);
+  .post(userController.login);
 
 router.route("/kakao/login").get();
 module.exports = router;
